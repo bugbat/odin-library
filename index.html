@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./library.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Library</title>
+</head>
+<body>
+  <div id="bookshelf">
+    <div class="book"><p>Book title, book author</p></div>
+    <div class="book"><p>Book title, book author</p></div>
+  </div>
+  <dialog>
+    <form id="book-form">
+      <div>
+        <label for="title">Title: </label>
+        <input type="text" name="title" autofocus required>
+        <label for="author">Author: </label>
+        <input type="text" name="author" required>
+        <label for="pages">Pages: </label>
+        <input type="number" name="pages" required>
+        <label for="read">Read? </label>
+        <input type="checkbox" name="read">
+      </div>
+      <div>
+        <button id="add-book" type="submit">Add</button>
+        <button id="cancel-add" formmethod="dialog" formnovalidate>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+  <button id="open-dialog" type="button">Add a book</button>
+</body>
+</html>
