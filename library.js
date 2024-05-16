@@ -1,21 +1,22 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  getInfo() {
+    return this.title 
+    + ' by ' + this.author 
+    + ', ' + this.pages 
+    + ' pages, ' + this.read;
+  }
 }
 
 function clearForm() {
   bookForm.reset();
-}
-
-Book.prototype.getInfo = function() {
-  return this.title 
-  + ' by ' + this.author 
-  + ', ' + this.pages 
-  + ' pages, ' + this.read;
 }
 
 function createBook(event) {
@@ -88,14 +89,6 @@ function updateLibrary() {
     
     bookshelf.appendChild(newdiv);
   });
-}
-
-function testData() {
-  const book1 = new Book ('The Hobbit', 'Tolkien', 1000, true)
-  const book2 = new Book ('The Hobbit 2', 'Token', 420, false)
-  myLibrary.push(book1);
-  myLibrary.push(book2);
-  updateLibrary()
 }
 
 // library
